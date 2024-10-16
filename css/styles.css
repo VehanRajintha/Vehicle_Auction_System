@@ -1,0 +1,411 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    position: relative;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ff6600;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+header ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6600;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+header ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+#hero .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: black;
+}
+
+#hero form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#hero input {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#hero button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#featured-auctions {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#featured-auctions h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.carousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.auction-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    min-width: 250px;
+    max-width: 250px;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.auction-item:hover {
+    transform: translateY(-10px);
+}
+
+.auction-item img {
+    max-width: 50%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    
+}
+
+.auction-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.auction-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0rem;
+}
+
+#search-form input[type="text"] {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+
+#search-form input[type="text"]:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+    outline: none;
+}
+
+#search-form button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#search-form button:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
+
+#search-form button:active {
+    background-color: #cc5200;
+    transform: translateY(0);
+}
+
+#how-it-works {
+    background-color: #f1f1f1;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+#how-it-works h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #ff6600;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#how-it-works h2:hover::after {
+    width: 100%;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.step {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ff6600;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.step:hover::before {
+    transform: translateX(0);
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#testimonials {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+#testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+#testimonials h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #ff6600;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#testimonials h2:hover::after {
+    width: 100%;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ff6600;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover::before {
+    transform: translateX(0);
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+#search-results {
+    padding: 2rem;
+    text-align: center;
+}
+
+#search-results h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.auction-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+.auction-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.post-auction-container {
+    position: absolute;
+    top: 312px;
+    right: 580px;
+}
+
+.post-auction-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.post-auction-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}

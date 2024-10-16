@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.inner-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
+
+.card button:active {
+    background-color: #cc5200;
+    transform: translateY(0);
+}
+
+.card button[type="button"] {
+    background-color: transparent;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    margin-top: 1rem;
+}
+
+.card button[type="button"]:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+.card.flipped .inner-box {
+    transform: rotateY(180deg);
+}
