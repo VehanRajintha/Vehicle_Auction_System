@@ -50,10 +50,11 @@ Admin login credential       : email ---> admin@gmail.com
 
 ## Screenshots
 
-![pic1](pic1.png)
-![pic2](pic2.png)
-![pic3](pic3.png)
-![pic4](pic4.png)
-![pic5](pic5.png)
-![pic6](pic6.png)
-![pic7](pic7.png)
+![pic1](pic1.jpg)
+![pic2](pic2.jpg)
+![pic03](pic03.jpg)
+![pic3](pic3.jpg)
+![pic4](pic4.jpg)
+![pic5](pic5.jpg)
+![pic6](pic6.jpg)
+![pic7](pic7.jpg)
